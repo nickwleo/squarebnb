@@ -8,9 +8,12 @@
                 <div class="card-header">{{ $listing->name }}</div>
 
                 <div class="card-body">
-                    <p>{{ $listing->description }}</p>
-                    <p>{{ $listing->address }}</p>
+                    <h4>{{ $listing->description }}</h4>
+                    <h4>{{ $listing->address }}</h4>
                     <div id="map" style="width:100%;height:300px;display:none;"></div>
+                    <br>
+                    <h4>Image Stored on Cloudinary via Their API (if provided)</h4>
+                    <p><img style="width:100%;height:auto;" src="{{ $listing->cloudinary_image_url }}"/></p>
                 </div>
             </div>
         </div>

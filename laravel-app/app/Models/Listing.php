@@ -29,6 +29,7 @@ class Listing extends Model
         'lat',
         'lng',
         'user_id',
+        'cloudinary_image_url',
     ];
 
     public function user(): BelongsTo

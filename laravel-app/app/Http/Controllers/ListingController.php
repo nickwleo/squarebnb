@@ -38,6 +38,10 @@ class ListingController extends Controller
         $listing->address = $request->address;
         $listing->lat = $request->latitude;
         $listing->lng = $request->longitude;
+        if($request->file('image') !== null) {
+            $uploadedFileUrl = cloudinary()->uploadFile($request->file('image')->getRealPath())->getSecurePath();
+            $listing->cloudinary_image_url = $uploadedFileUrl;
+        }
         $listing->user_id = $user->id;
         $listing->save();
         return redirect('listings');

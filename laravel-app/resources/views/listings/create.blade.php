@@ -9,13 +9,16 @@
                 <div class="card-header">{{ __('Create Listing') }}</div>
 
                 <div class="card-body">
-                    <form action="/listings" method="POST">
+                    <form action="/listings" method="POST" enctype="multipart/form-data">
                         @csrf
                         <label for="name">Listing Title</label>
                         <input class="form-control" id="name" name="name" type="text" />
                         <br/>
                         <label for="description">Listing Description</label>
                         <input class="form-control" id="description" name="description" type="text" />
+                        <br>
+                        <label for="image">Image (optional)</label>
+                        <input class="form-control" id="image" name="image" type="file" />
                         <br>
                         <label for="address">Complete Address</label>
                         <input class="form-control" id="address" name="address" type="text" />
@@ -30,7 +33,7 @@
                         <input class="form-control" id="longitude" name="longitude" type="text" />
 
                         <br>
-                        
+
                         <div id="map" style="width:100%;height:300px;display:none;"></div>
 
                         <br>
