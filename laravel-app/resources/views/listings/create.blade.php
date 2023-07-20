@@ -20,7 +20,7 @@
                         <label for="address">Complete Address</label>
                         <input class="form-control" id="address" name="address" type="text" />
                         <br>
-                        <button type="button" onclick="getCoords()" class="form-control btn btn-primary">Get Address Coordinates</button>
+                        <button type="button" onclick="getCoords()" class="form-control btn btn-primary">Get Address Coordinates via Geocoding API</button>
                         <br>
                         <br>
                         <label for="description">Latitude (auto-populated)</label>
