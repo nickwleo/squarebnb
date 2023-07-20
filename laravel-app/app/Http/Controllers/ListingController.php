@@ -35,6 +35,9 @@ class ListingController extends Controller
         $user = Auth::user();
         $listing->name = $request->name;
         $listing->description = $request->description;
+        $listing->address = $request->address;
+        $listing->lat = $request->latitude;
+        $listing->lng = $request->longitude;
         $listing->user_id = $user->id;
         $listing->save();
         return redirect('listings');
