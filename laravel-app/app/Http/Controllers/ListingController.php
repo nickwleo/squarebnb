@@ -46,9 +46,10 @@ class ListingController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Listing $listing)
+    public function show(Request $request)
     {
-        //
+        $listing = Listing::find($request->id);
+        return View::make('listings/show', ['listing' => $listing]);
     }
 
     /**

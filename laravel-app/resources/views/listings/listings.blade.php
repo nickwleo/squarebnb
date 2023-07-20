@@ -19,7 +19,7 @@
                         </thead>
                         <tbody>
                             @foreach ($listings as $listing)
-                                <tr><td>{{ $listing->name }}</td><td>{{ $listing->description }}</tr>
+                                <tr><td><a href='/listings/{{$listing->id}}'>{{ $listing->name }}</a></td><td>{{ $listing->description }}</tr>
                             @endforeach
                         </tbody>
                     </table>

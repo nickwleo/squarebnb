@@ -30,7 +30,7 @@
                         <input class="form-control" id="longitude" name="longitude" type="text" />
 
                         <br>
-    
+                        
                         <div id="map" style="width:100%;height:300px;display:none;"></div>
 
                         <br>
